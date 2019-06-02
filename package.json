@@ -1,0 +1,41 @@
+{
+  "name": "@open-tech-world/deploy-site",
+  "version": "0.0.0",
+  "description": "Node.js CLI tool for deploying static websites.",
+  "main": "cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "bin": {
+    "@open-tech-world/deploy-site": "cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/open-tech-world/deploy-site.git"
+  },
+  "keywords": [
+    "node",
+    "cli",
+    "deploy",
+    "static",
+    "websites"
+  ],
+  "author": {
+    "name": "Thanga Ganapathy",
+    "email": "ganapathy888@gmail.com",
+    "url": "https://ganapathy888.github.io"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/open-tech-world/deploy-site/issues"
+  },
+  "homepage": "https://github.com/open-tech-world/deploy-site#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "prettier": "^1.17.1"
+  }
+}
