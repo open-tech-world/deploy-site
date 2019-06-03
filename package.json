@@ -1,7 +1,7 @@
 {
   "name": "@open-tech-world/deploy-site",
   "version": "0.0.0",
-  "description": "Node.js CLI tool for deploying static websites.",
+  "description": "Node.js CLI utility for deploying static websites.",
   "main": "cli.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

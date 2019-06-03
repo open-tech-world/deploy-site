@@ -1,6 +1,6 @@
 # @open-tech-world/deploy-site
 
-> Node.js CLI tool for deploying static websites.
+> Node.js CLI utility for deploying static websites.
 
 ## Install
 
