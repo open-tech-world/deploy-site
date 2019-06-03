@@ -34,7 +34,9 @@
   },
   "homepage": "https://github.com/open-tech-world/deploy-site#readme",
   "dependencies": {
-    "chalk": "^2.4.2"
+    "chalk": "^2.4.2",
+    "inquirer": "^6.3.1",
+    "ora": "^3.4.0"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
