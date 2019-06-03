@@ -33,7 +33,9 @@
     "url": "https://github.com/open-tech-world/deploy-site/issues"
   },
   "homepage": "https://github.com/open-tech-world/deploy-site#readme",
-  "dependencies": {},
+  "dependencies": {
+    "chalk": "^2.4.2"
+  },
   "devDependencies": {
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
