@@ -4,9 +4,11 @@ module.exports = {
     es6: true,
     node: true,
   },
+  plugins: ['jest'],
   extends: [
     'airbnb-base',
     'plugin:prettier/recommended',
+    'plugin:jest/recommended',
   ],
   globals: {
     Atomics: 'readonly',
