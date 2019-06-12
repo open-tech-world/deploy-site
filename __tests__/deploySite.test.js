@@ -16,7 +16,7 @@ describe('create deploy.json file', () => {
 
   it('creates a s3 config file with staging & production env', async () => {
     await init(
-      { provider: 's3', env: ['staging', 'production'] },
+      { provider: 's3', env: 'staging, production' },
       '__tests__/react-app'
     );
     expect(existsSync('__tests__/react-app/deploy.json')).toBeTruthy();
@@ -26,20 +26,20 @@ describe('create deploy.json file', () => {
 describe('build app', () => {
   test('the empty params fails with an error', async () => {
     expect.assertions(1);
-    await expect(build({})).rejects.toThrow();
+    await expect(build()).rejects.toThrow();
   });
 
   test('the invalid provider fails with an error', async () => {
     expect.assertions(1);
-    await expect(build('unknown')).rejects.toThrow(
-      'No such provider(unknown) found'
-    );
+    await expect(
+      build('unknown', '', '__tests__/react-app/deploy.json')
+    ).rejects.toThrow('No such provider(unknown) found');
   });
 
   test('the invalid env fails with an error', async () => {
     expect.assertions(1);
-    await expect(build('s3', 'test')).rejects.toThrow(
-      'No such environment(test) found'
-    );
+    await expect(
+      build('s3', 'test', '__tests__/react-app/deploy.json')
+    ).rejects.toThrow('No such environment(test) found');
   });
 });
