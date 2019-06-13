@@ -34,8 +34,10 @@
   },
   "homepage": "https://github.com/open-tech-world/deploy-site#readme",
   "dependencies": {
+    "@open-tech-world/parse-env-file": "^1.0.1",
     "chalk": "^2.4.2",
     "eslint-plugin-jest": "^22.6.4",
+    "execa": "^1.0.0",
     "inquirer": "^6.3.1",
     "jest": "^24.8.0",
     "ora": "^3.4.0"
