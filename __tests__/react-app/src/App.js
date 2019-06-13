@@ -5,6 +5,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+      <h1>Welcome to {process.env.REACT_APP_NAME} ({process.env.REACT_APP_BUILD_ENV})</h1>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
