@@ -1,5 +1,6 @@
 const { existsSync } = require('fs');
 const path = require('path');
+const { remove } = require('fs-extra');
 
 const init = require('../lib/init/create');
 const parseConfig = require('../lib/build/parseConfig');
@@ -7,6 +8,15 @@ const build = require('../lib/build');
 
 const reactAppPath = path.join('__tests__', 'react-app');
 const configFile = path.join(reactAppPath, 'deploy.json');
+
+async function cleanUp() {
+  await remove(path.join(reactAppPath, 'build'));
+  await remove(configFile);
+}
+
+beforeAll(() => {
+  return cleanUp();
+});
 
 describe('create deploy.json file', () => {
   test('the empty params fails with an error', async () => {
@@ -54,12 +64,6 @@ describe('build app', () => {
 
   it('creates the react app staging build', async () => {
     const { code } = await build('s3', 'staging', reactAppPath);
-    expect(existsSync(path.join(reactAppPath, 'build'))).toBeTruthy();
-    expect(code).toBe(0);
-  }, 10000);
-
-  it('creates the react app production build', async () => {
-    const { code } = await build('s3', 'production', reactAppPath);
     expect(existsSync(path.join(reactAppPath, 'build'))).toBeTruthy();
     expect(code).toBe(0);
   }, 10000);
