@@ -72,5 +72,8 @@
       "prettier --ignore-path .prettierignore --config .prettierrc.js --write",
       "git add"
     ]
-  }
+  },
+  "files": [
+    "lib"
+  ]
 }
