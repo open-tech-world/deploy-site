@@ -34,6 +34,7 @@
   },
   "homepage": "https://github.com/open-tech-world/deploy-site#readme",
   "dependencies": {
+    "@open-tech-world/cli-progress-bar": "^1.0.6",
     "@open-tech-world/parse-env-file": "^1.0.1",
     "aws-sdk": "^2.475.0",
     "chalk": "^2.4.2",
