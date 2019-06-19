@@ -42,8 +42,8 @@ describe('build app', () => {
   });
 
   it('creates the react app staging build', async () => {
-    const { code } = await build('s3', 'staging', reactAppPath);
+    const { childProcess } = await build('s3', 'staging', reactAppPath);
     expect(existsSync(path.join(reactAppPath, 'build'))).toBeTruthy();
-    expect(code).toBe(0);
+    expect(childProcess.code).toBe(0);
   }, 10000);
 });
