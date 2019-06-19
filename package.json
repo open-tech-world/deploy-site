@@ -42,6 +42,7 @@
     "execa": "^1.0.0",
     "globby": "^9.2.0",
     "inquirer": "^6.3.1",
+    "micromatch": "^4.0.2",
     "mime-types": "^2.1.24",
     "ora": "^3.4.0"
   },
