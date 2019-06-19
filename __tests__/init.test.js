@@ -30,7 +30,7 @@ describe('create deploy.json file', () => {
 
   it('creates a s3 config file with staging & production env', async () => {
     await init(
-      { provider: 's3', env: 'staging, production', buildDir: 'build' },
+      { provider: 's3', env: ['staging', 'production'], buildDir: 'build' },
       reactAppPath
     );
     expect(existsSync(configFile)).toBeTruthy();
