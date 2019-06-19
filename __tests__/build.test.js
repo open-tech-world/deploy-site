@@ -26,7 +26,7 @@ describe('build app', () => {
   test('the invalid provider fails with an error', async () => {
     expect.assertions(1);
     await init(
-      { provider: 's3', env: 'staging, production', buildDir: 'build' },
+      { provider: 's3', env: ['staging', 'production'], buildDir: 'build' },
       reactAppPath
     );
     await expect(build('unknown', '', reactAppPath)).rejects.toThrow(
