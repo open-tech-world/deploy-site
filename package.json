@@ -10,7 +10,7 @@
     "node": ">=10"
   },
   "bin": {
-    "@open-tech-world/deploy-site": "cli.js"
+    "deploy-site": "cli.js"
   },
   "repository": {
     "type": "git",
