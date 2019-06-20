@@ -67,9 +67,9 @@ REACT_APP_WEBSITE_NAME=Production app
 REACT_APP_API_URL=https://api.example.com
 ```
 
-Same for other env like `.env.staging`, etc.
+Same for other environments like `.env.staging`, etc.
 
-## CLI Usage
+## Usage
 
 Run the commands in your project root.
 
@@ -92,10 +92,10 @@ Available commands:
 ### Deployment
 
 ```bash
+# Using npm
 npm run deploy -- s3 production
-```
 
-```bash
+# Using yarn
 yarn run deploy s3 staging
 ```
 
@@ -107,6 +107,27 @@ npm run deploy -- -v | --version
 
 ```bash
 yarn run deploy -h | --help
+```
+
+### Caveats
+
+- Out of the box it works fine with the [create-react-app](https://facebook.github.io/create-react-app/), but if you `ejected` your app from it or having customized webpack build solution, then you need to do the following in your app to process your `.env` variables file.
+
+```bash
+npm install dotenv-webpack --save-dev
+```
+
+Add this in your env specific webpack config file
+
+```js
+const Dotenv = require('dotenv-webpack');
+
+plugins: [
+  new Dotenv({
+    path: './.env.production', // Path to .env file (this is the default)
+    safe: true, // load .env.example (defaults to "false" which does not use dotenv-safe)
+  }),
+];
 ```
 
 ## License
