@@ -36,15 +36,49 @@ Add a new script to your `package.json`.
 ```json
 {
   "scripts": {
-    "deploy": "@open-tech-world/deploy-site"
+    "deploy": "deploy-site"
   }
 }
 ```
 
-## CLI Usage
+### 3. Create deployment config file
+
+Run the following command in your project root.
+
+It will create a `deploy.json` configuration file in your project root.
 
 ```bash
-$ npx @open-tech-world/sw-deploy [HOSTING_PROVIDER ENV | command]
+# With npm (Note: extra double dash below is required)
+npm run deploy -- --init
+
+# With yarn
+yarn run deploy --init
+```
+
+### 4. Create env file
+
+Create environment specific file in your project root.
+
+For production, create a `.env.production` file and add some variables into it.
+
+```
+REACT_APP_WEBSITE_NAME=Production app
+
+REACT_APP_API_URL=https://api.example.com
+```
+
+Same for other env like `.env.staging`, etc.
+
+## CLI Usage
+
+Run the commands in your project root.
+
+```bash
+# With npm (Note: extra double dash below is required)
+$ npm run deploy -- [HOSTING_PROVIDER ENV | command]
+
+# With yarn
+$ yarn run deploy [HOSTING_PROVIDER ENV | command]
 ```
 
 Available commands:
@@ -52,6 +86,28 @@ Available commands:
     --init              Creates a config file in the project root
     -h, --help          Show help
     -v, --version       Show version
+
+## Examples
+
+### Deployment
+
+```bash
+npm run deploy -- s3 production
+```
+
+```bash
+yarn run deploy s3 staging
+```
+
+### Running commands
+
+```bash
+npm run deploy -- -v | --version
+```
+
+```bash
+yarn run deploy -h | --help
+```
 
 ## License
 
