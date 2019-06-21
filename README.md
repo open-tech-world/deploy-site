@@ -19,7 +19,7 @@
 
 ### 1. Install
 
-Install this package as development dependencies in your project.
+Install this package as a development dependency in your project.
 
 ```bash
 # With npm
@@ -49,10 +49,10 @@ It will create a `deploy.json` configuration file in your project root.
 
 ```bash
 # With npm (Note: extra double dash below is required)
-npm run deploy -- --init
+$ npm run deploy -- --init
 
 # With yarn
-yarn run deploy --init
+$ yarn run deploy --init
 ```
 
 ### 4. Create env file
@@ -93,20 +93,20 @@ Available commands:
 
 ```bash
 # Using npm
-npm run deploy -- s3 production
+$ npm run deploy -- s3 production
 
 # Using yarn
-yarn run deploy s3 staging
+$ yarn run deploy s3 staging
 ```
 
 ### Running commands
 
 ```bash
-npm run deploy -- -v | --version
+$ npm run deploy -- -v | --version
 ```
 
 ```bash
-yarn run deploy -h | --help
+$ yarn run deploy -h | --help
 ```
 
 ### Caveats
