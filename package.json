@@ -1,6 +1,6 @@
 {
   "name": "@open-tech-world/deploy-site",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Node.js CLI utility for deploying static websites.",
   "main": "cli.js",
   "scripts": {
